@@ -1,0 +1,173 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* Cores: */
+/* Azul 1 -> #000080 */
+/* Azul 2 -> #1d0eb1 */
+
+:root{
+    --darkness-blue: #000080;
+    --lightness-blue:#1d0eb1;
+    --white: #fff;
+}
+
+header{
+    position: relative;
+    background-color: var(--darkness-blue);
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+}
+
+header h1{
+    font-family: "Space Grotesk ", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    padding: 1rem 11.5rem;
+    height: 70px;
+}
+
+nav ul{
+    display: flex;
+    gap: 1.5rem;
+    font-size: 20px;
+}
+
+nav li{
+    font-family: "Montserrat", sans-serif;
+    cursor: pointer;
+}
+
+nav li a{
+    color: var(--white);
+}
+
+.subheader{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--white);
+    color: var(--darkness-blue);
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+    font-weight: bold;
+    padding: 0.5rem;
+    height: 30px;
+}
+
+#particles-js{
+    background-color: var(--darkness-blue);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 0;
+}
+
+section#home{
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: calc(100vh - 100px);
+}
+
+div.apresentation{
+    background-color: var(--white);
+    border-radius: 1rem;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+    gap: 14rem;
+    display: flex;
+}
+
+div.layout{
+    display: flex;
+    max-width: 800px;
+}
+
+.layout img{
+    max-width: 300px;
+    border-radius: 0.5rem;
+    border: 3px solid var(--darkness-blue);
+    transition: all 0.4s ease;
+}
+
+.layout img:hover{
+    box-shadow: 4px 4px 10px rgba(70, 90, 175, 0.5);
+    transform: translateY(-5px);
+}
+
+div.description{
+    color: var(--darkness-blue);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 600px;
+}
+
+div.description h2{
+    font-family: "Space Grotesk ", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    font-size: 2.5rem;
+    text-align: right;
+}
+
+div.description .text{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    font-family: "Montserrat", sans-serif;
+    text-align: right;
+    font-size: 18px;
+}
+
+div.description .button{
+    width: 100%;
+    display: flex;
+    justify-content: end    ;
+}
+
+div.button button{
+    outline: none;
+    background-color: transparent;
+    color: var(--darkness-blue);
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    border: 3px solid var(--darkness-blue);
+    padding: 1rem;
+    border-radius: 8px;
+    max-width: 200px;
+    transition: all 0.6s ease;
+    cursor: pointer;
+}
+
+div.button button:hover{
+    background-color: var(--darkness-blue);
+    color: var(--white);
+}
