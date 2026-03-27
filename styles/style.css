@@ -30,7 +30,7 @@ header{
 }
 
 header h1{
-    font-family: "Space Grotesk ", sans-serif;
+    font-family: "Space Grotesk", sans-serif;
     font-optical-sizing: auto;
     font-weight: weight;
     font-style: normal;
@@ -116,7 +116,7 @@ div.layout{
 }
 
 .layout img:hover{
-    box-shadow: 4px 4px 10px rgba(70, 90, 175, 0.5);
+    box-shadow: 4px 4px 10px rgba(70, 89, 175, 0.752);
     transform: translateY(-5px);
 }
 
@@ -129,7 +129,7 @@ div.description{
 }
 
 div.description h2{
-    font-family: "Space Grotesk ", sans-serif;
+    font-family: "Space Grotesk", sans-serif;
     font-optical-sizing: auto;
     font-weight: weight;
     font-style: normal;
@@ -152,12 +152,12 @@ div.description .button{
     justify-content: end    ;
 }
 
-div.button button{
+div.button .btn-about-more{
     outline: none;
     background-color: transparent;
     color: var(--darkness-blue);
     font-family: "Montserrat", sans-serif;
-    font-weight: bold;
+    font-weight: 600;
     font-size: 20px;
     border: 3px solid var(--darkness-blue);
     padding: 1rem;
@@ -167,7 +167,76 @@ div.button button{
     cursor: pointer;
 }
 
-div.button button:hover{
+div.button a:hover{
     background-color: var(--darkness-blue);
     color: var(--white);
+}
+
+section#topics{
+    position: relative;
+    background-color: white;
+    z-index: 1;
+    display: flex;
+    padding: 4.5rem;
+    gap: 2.5rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+section#topics h1{
+    color: var(--darkness-blue);
+    font-family: "Space Grotesk", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    font-size: 2.5rem;
+}
+
+.cards{
+    display: flex;
+    gap: 4rem;
+}
+
+.card-content{
+    display: flex;
+    flex: wrap;
+    flex-direction: column;
+    align-items: center;
+    max-width: 300px;
+    background-color: var(--darkness-blue);
+    color: var(--white);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.8s;
+}
+
+.card-content:hover{
+    box-shadow: 4px 4px 10px rgba(70, 89, 175, 0.752);
+}
+
+.card-content h2{
+    color: var(--white);
+    text-align: center;
+    padding: 12px;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.image-card{
+    overflow: hidden;
+}
+
+.image-card img{
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+    transition: transform 0.8s;
+}
+
+.image-card img:hover{
+    transform: scale(1.1);
+    z-index: 1;
 }
