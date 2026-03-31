@@ -1,3 +1,4 @@
+/* Configs Padrões */
 *{
     box-sizing: border-box;
     padding: 0;
@@ -6,6 +7,7 @@
     list-style: none;
 }
 
+/* Animação na transição de tela */
 html{
     scroll-behavior: smooth;
 }
@@ -13,6 +15,7 @@ html{
 /* Cores: */
 /* Azul 1 -> #000080 */
 /* Azul 2 -> #1d0eb1 */
+/* Branco -> #fff */
 
 :root{
     --darkness-blue: #000080;
@@ -68,7 +71,7 @@ nav li a{
     color: var(--darkness-blue);
     font-family: "Montserrat", sans-serif;
     text-align: center;
-    font-weight: bold;
+    font-weight: 600;
     padding: 0.5rem;
     height: 30px;
 }
@@ -196,15 +199,16 @@ section#topics h1{
 
 .cards{
     display: flex;
+    justify-content: center;
+    align-items: flex-start;
     gap: 4rem;
 }
 
 .card-content{
     display: flex;
-    flex: wrap;
     flex-direction: column;
     align-items: center;
-    max-width: 300px;
+    width: 300px;
     background-color: var(--darkness-blue);
     color: var(--white);
     border-radius: 10px;
@@ -219,7 +223,7 @@ section#topics h1{
 .card-content h2{
     color: var(--white);
     text-align: center;
-    padding: 12px;
+    padding: 1rem;
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
     font-weight: normal;
@@ -227,11 +231,17 @@ section#topics h1{
 }
 
 .image-card{
+    width: 100%;
+    height: 400px;
+    aspect-ratio: 1 / 1;
     overflow: hidden;
 }
 
 .image-card img{
     width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
     border-radius: 10px 10px 0 0;
     transition: transform 0.8s;
 }
@@ -239,4 +249,115 @@ section#topics h1{
 .image-card img:hover{
     transform: scale(1.1);
     z-index: 1;
+}
+
+section#pictures{
+    position: relative;
+    z-index: 1;
+    display: flex;
+    padding: 4.5rem;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+div.galeria{
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    background-color: var(--white);
+    padding: 6px;
+    border-radius: 0.5rem;
+}
+
+div.linha-galeria{
+    display: flex;
+    gap: 6px;
+}
+
+div.img-galeria{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    overflow: hidden;
+    width: 100%;
+    height: 270px;
+}
+
+.img-galeria img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.8s;
+}
+
+.img-galeria img:hover{
+    transform: scale(1.2);
+    z-index: 1;
+}
+
+footer{
+    background-color: var(--white);
+    color: var(--darkness-blue);
+    margin-top: 4rem;
+    position: relative;
+    z-index: 1;
+}
+
+.container-footer{
+    width: 100%;
+    margin: 0 auto;
+    padding: 2rem 8rem;
+}
+
+.footer-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.footer-info h3{
+    font-family: "Space Grotesk", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
+.footer-info p{
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
+}
+
+.social-links{
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.social-links a{
+    color: var(--darkness-blue);
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover{
+    color: var(--lightness-blue);
+}
+
+.footer-bottom{
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid var(--lightness-blue);
+}
+
+.footer-bottom p{
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: normal;
+    font-style: normal;
 }
